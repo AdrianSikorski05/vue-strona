@@ -1,0 +1,65 @@
+@import './base.css';
+@font-face {
+  font-family: 'EraCake';
+  src: url('@/assets/fonts/Eracake.otf') format('opentype'),
+       url('@/assets/fonts/Eracake.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'test';
+  src: url('@/assets/fonts/test2.otf') format('opentype');    
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Domyślne ustawienia dla mniejszych ekranów */
+#app {
+  max-width: 1023px;
+  margin: 0 auto;
+  font-weight: normal;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'EraCake', cursive !important;  
+}
+
+/* Style dla linków */
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: all 0.3s ease;
+  padding: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  background-color: hsla(160, 100%, 37%, 0.2);
+  border-bottom-color: hsla(160, 100%, 37%, 0.6);
+}
+
+/* Layout dla ekranów powyżej 1024px */
+@media (min-width: 1024px) {
+  #app {
+    min-width: 1024px;
+    max-width: 1279px;   
+  }
+}
+
+/* Dostosowanie dla większych ekranów (1280px) */
+@media (min-width: 1280px) {
+  #app {
+    min-width: 1280px;
+    max-width: 1919px;   
+  }
+}
+
+/* Dostosowanie dla ekranów ultrapanoramicznych (1920px i więcej) */
+@media (min-width: 1920px) {
+  #app {
+    min-width: 1920px;   
+    max-width: 5000px;   
+  }
+}
