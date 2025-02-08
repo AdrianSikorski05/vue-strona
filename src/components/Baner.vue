@@ -6,8 +6,10 @@
             
           </h1>
           <p class="hero-subtitle">Tworzymy wyjątkowe torty na każdą okazję. Skontaktuj się z nami i zaplanuj swoją wymarzoną słodycz!</p>
-          <v-btn @click="scrollToSection('form')" class="hero-btn" color="pink" large rounded>Skontaktuj się
+          <v-btn @click="scrollToSection('form')" class="hero-btn" color="pink" large rounded>
+            <div class="btn-text">Skontaktuj się</div>
             <v-icon
+                class="icon-title"
                 icon="mdi-phone"
                 end></v-icon>
           </v-btn>

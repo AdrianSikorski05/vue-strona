@@ -1,6 +1,6 @@
 <template>
     <v-container class="my-2 about-container">
-    <h2 class="about-title h2"> <v-icon icon="mdi-cupcake" size="45"></v-icon> O mnie</h2>
+    <h2 class="about-title h2"> <v-icon class="icon-title" icon="mdi-cupcake" size="45"></v-icon> O mnie</h2>
       <v-row align="center" justify="space-between">
         <v-col cols="12" md="5" class="text-center">           
             <v-img 

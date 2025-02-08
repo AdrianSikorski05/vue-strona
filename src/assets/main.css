@@ -16,7 +16,6 @@
 
 /* Domyślne ustawienia dla mniejszych ekranów */
 #app {
-  max-width: 1023px;
   margin: 0 auto;
   font-weight: normal;
   background-color: var(--color-background-soft);
@@ -39,11 +38,55 @@ a:hover {
   background-color: hsla(160, 100%, 37%, 0.2);
   border-bottom-color: hsla(160, 100%, 37%, 0.6);
 }
+@media (max-width: 600px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 140% !important;
+  }
 
+  p, span, a {
+    font-size: 120% !important;
+  }
+
+  .title-card {
+    font-size: medium !important;
+  }
+  .icon-title{
+    font-size: 34px !important;
+  }
+  .btn-text  {
+    font-size: 60% !important;
+  }
+  span > .icon-title{
+    font-size: 20px !important;
+  }
+  .margin-20 {
+    margin-top: 3rem;
+  }
+
+  .about-description{
+    font-size: 90% !important;
+  }
+
+  .footer-title{
+    font-size: 60% !important;
+  }
+
+  .about-img{
+    scale: 70% !important;
+  }
+
+  .footer-btn-container{
+    gap: 5px !important;
+  }
+
+  .banner-image{
+    height: 5.5rem !important;
+  }
+ 
+}
 /* Layout dla ekranów powyżej 1024px */
 @media (min-width: 1024px) {
   #app {
-    min-width: 1024px;
     max-width: 1279px;   
   }
 }
@@ -51,15 +94,13 @@ a:hover {
 /* Dostosowanie dla większych ekranów (1280px) */
 @media (min-width: 1280px) {
   #app {
-    min-width: 1280px;
     max-width: 1919px;   
   }
 }
 
 /* Dostosowanie dla ekranów ultrapanoramicznych (1920px i więcej) */
 @media (min-width: 1920px) {
-  #app {
-    min-width: 1920px;   
+  #app { 
     max-width: 5000px;   
   }
 }

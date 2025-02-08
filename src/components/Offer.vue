@@ -5,7 +5,7 @@
 
 <template>
     <h2 class="font-weight-bold gallery-text">
-        <v-icon icon="mdi-cupcake" size="45"/>
+        <v-icon class="icon-title" icon="mdi-cupcake" size="45"/>
         Oferta (Wkrótce...)
     </h2>
 </template>

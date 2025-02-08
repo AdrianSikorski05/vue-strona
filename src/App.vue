@@ -1,7 +1,7 @@
 <template>
   <v-app>  
     <Navigation2/>     
-    <v-main>
+    <v-main class="main">
       <Baner/>
       <div data-section="about">
         <About />
@@ -52,14 +52,16 @@ export default {
 
 <style>
 
-#app
-{
+#app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 
 .margin-20{
   margin-top: 7rem;

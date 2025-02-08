@@ -2,7 +2,7 @@
 
 <template>
     <v-container class="my-12">
-      <h2 class="font-weight-bold form-text"> <v-icon icon="mdi-cupcake" size="45"></v-icon>Skontaktuj się ze mną</h2>
+      <h2 class="font-weight-bold form-text"> <v-icon class="icon-title" icon="mdi-cupcake" size="45"></v-icon>Skontaktuj się</h2>
       <v-form ref="form" v-model="valid">
         <v-text-field
           v-model="name"

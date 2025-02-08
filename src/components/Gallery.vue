@@ -2,7 +2,7 @@
 
 <template>
   <h2 class="font-weight-bold gallery-text">
-    <v-icon icon="mdi-cupcake" size="45"></v-icon>
+    <v-icon class="icon-title" icon="mdi-cupcake" size="45"></v-icon>
     Galeria tortów
   </h2>
   <v-container class="my-5 d-flex justify-center">

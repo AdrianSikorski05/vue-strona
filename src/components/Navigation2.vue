@@ -4,7 +4,7 @@
     <img src="@/assets/logo.png" alt="Logo" style="max-width: 80px;" />
 
     <!-- Tytuł strony -->
-    <v-toolbar-title class="text-title d-md-inline white--text v-toolbar-title">Delicje i ciasta</v-toolbar-title>
+    <v-toolbar-title class="text-title d-md-inline white--text v-toolbar-title">{{ isMobile ? 'DIC' : 'Delicje i Ciasta' }}</v-toolbar-title>
 
     <!-- Nawigacja dla większych ekranów -->
     <div class="d-none d-md-flex">
@@ -25,7 +25,7 @@
     <!-- Nawigacja w szufladzie dla mniejszych ekranów -->
     <v-menu activator="#menu-activator">
       <template v-slot:activator="{ props }">
-        <v-btn class=" d-md-none white--text" icon="mdi-dots-vertical" variant="text" v-bind="props"></v-btn>
+        <v-btn class="d-md-none white--text" icon="mdi-dots-vertical" variant="text" v-bind="props"></v-btn>
       </template>
 
       
@@ -66,6 +66,7 @@ export default {
   name: 'Navigation2',
   data() {
     return {
+      isMobile: false,
       drawer: false, // Kontroluje otwieranie i zamykanie nawigacji
     };
   },
@@ -81,24 +82,30 @@ export default {
         });
       }
     },
+    checkScreenSize() {
+      this.isMobile = window.innerWidth <= 530;
+    },
     scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
+  },
+  mounted() {
+    // Sprawdź przy ładowaniu strony
+    this.checkScreenSize();
+    // Dodaj nasłuchiwacza na zmiany rozmiaru
+    window.addEventListener('resize', this.checkScreenSize);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkScreenSize);
   }
 };
 
 </script>
 
 <style>
-@media (max-width: 530px) {
-  .v-toolbar-title.text-title {
-    font-size: 20px !important;
-  }
-}
-
   .list-item{
     padding: 0 !important;
     margin: 0 !important;

@@ -1,20 +1,20 @@
 
 <template>
     <v-footer color="primary" class="text-center white--text">
-    <p class="white--text">&copy; {{ new Date().getFullYear() }} Delicje i ciasta</p>
+    <p class="white--text footer-title">&copy; {{ new Date().getFullYear() }} Delicje i ciasta</p>
     <v-spacer></v-spacer>
-
+    <div class="footer-btn-container">
     <v-btn
             v-for="icon in socialLinks"
             :key="icon.name"
             :href="icon.link"
             target="_blank"
-            class="mx-7 white--text"
+            class="white--text footer-btn"
             size="30"
             variant="plain">
-            <v-icon>{{ icon.icon }}</v-icon>
-        </v-btn>
-    
+            <v-icon class="icon-title">{{ icon.icon }}</v-icon>
+      </v-btn>
+    </div>
   </v-footer>
 </template>
 
@@ -37,6 +37,12 @@
   color: white !important;
 }
 
+.footer-btn-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
 v-footer {
   width: 100%;
 }
